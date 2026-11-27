@@ -1,6 +1,6 @@
 # Data Engineering Portfolio
 
-A practical, evidence-driven portfolio focused on modern data engineering: cloud data platforms, batch and streaming pipelines, data integration, warehouse modelling, data quality, and distributed processing.
+A practical, evidence driven portfolio focused on modern data engineering: cloud data platforms, batch and streaming pipelines, data integration, warehouse modelling, data quality, and distributed processing.
 
 The repository is designed around realistic business case studies and reproducible engineering work. Project implementations are added and verified incrementally; planned work is clearly labelled rather than presented as completed production experience.
 
