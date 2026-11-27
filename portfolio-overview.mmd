@@ -1,0 +1,19 @@
+flowchart LR
+    subgraph Shared["shared/ library"]
+        CFG[configuration]
+        LOG[structured logging]
+        RTY[retry / backoff]
+        ERR[error types]
+    end
+    subgraph Projects
+        P1["01 Azure lakehouse<br/>(batch, medallion)"]
+        P2["02 Warehouse + dbt<br/>(modelling, SCD2)"]
+        P3["03 Streaming<br/>(Kafka + Spark SS)"]
+        P4["04 Integration + CDC<br/>(Debezium, APIs)"]
+        P5["05 Data quality<br/>(GX + Airflow)"]
+        P6["06 Spark optimization<br/>(benchmarks)"]
+    end
+    CI["GitHub Actions<br/>lint, tests, links, secret scan"]
+    Shared --> P1 & P3 & P4 & P5
+    CI -.-> Projects
+    CI -.-> Shared
