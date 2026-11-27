@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.egg-info/
+
+# Secrets and local configuration (never commit)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.tfvars
+!*.tfvars.example
+.azure/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Data and engine artefacts
+data/generated/
+*.parquet
+!**/fixtures/*.parquet
+spark-warehouse/
+metastore_db/
+derby.log
+checkpoints/
+**/_delta_log/
+.ivy2/
+
+# dbt / Airflow
+target/
+dbt_packages/
+logs/
+airflow.db
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+.ipynb_checkpoints/

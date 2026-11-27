@@ -1,0 +1,5 @@
+# Repository-level developer tooling. Runtime dependencies live in each project.
+# Ranges only: exact versions are pinned per project once they have been installed and tested.
+ruff>=0.6
+pytest>=8.0
+pytest-cov>=5.0
