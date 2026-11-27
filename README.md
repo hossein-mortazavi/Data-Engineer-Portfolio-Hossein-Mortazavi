@@ -78,3 +78,30 @@ Repeatable Spark experiments on layout, partitioning, joins, shuffle and caching
 
 This file will be replaced by the full case-study README
 ([template](../docs/project-documentation/README-template.md)) when the project is implemented and validated.
+
+
+
+
+# Data dictionaries
+
+Each project keeps its dictionary in this directory as `<project-slug>.md` once its
+schemas are final (for example `01-azure-end-to-end-data-platform.md`).
+
+## Required format
+
+One section per table or topic:
+
+```
+### schema.table_name
+Grain: one row per ...
+Primary key: ...
+Source: ... (system, endpoint or upstream model)
+Refresh: batch / incremental / streaming, and expected frequency
+
+| Column | Type | Nullable | Description | Validation |
+|---|---|---|---|---|
+```
+
+Rules: describe business meaning, not just the type; name the validation that enforces
+each constraint; mark every dataset as synthetic. Dictionaries are checked against the
+schemas under `data/schemas/` before a project is marked complete.
